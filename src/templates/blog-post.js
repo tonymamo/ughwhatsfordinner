@@ -6,20 +6,20 @@ import Layout from "../components/layout"
 
 export const BlogPostTemplate = props => {
   return (
-    // <Layout>
-    <div className="blog-content">
-      <Seo title={props.title} description={props.description} />
+    <Layout>
+      <div className="blog-content">
+        <Seo title={props.title} description={props.description} />
 
-      <h1>{props.title}</h1>
+        <h1>{props.title}</h1>
 
-      <p style={{ fontStyle: "italic" }}>{props.description}</p>
+        <p style={{ fontStyle: "italic" }}>{props.description}</p>
 
-      <section
-        dangerouslySetInnerHTML={{ __html: props.content }}
-        itemProp="articleBody"
-      />
-    </div>
-    // </Layout>
+        <section
+          dangerouslySetInnerHTML={{ __html: props.content }}
+          itemProp="articleBody"
+        />
+      </div>
+    </Layout>
   )
 }
 
